@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
-    "daisyui": "^4.12.10",
     "nuxt-phosphor-icons": "^1.3.0"
   }
 }
