@@ -18,12 +18,17 @@ module.exports = {
             },
             boxShadow: {
                 'DEFAULT': '0 0 12px 0 rgba(0, 0, 0, 0.1)',
+                'accent-dark':'0 0 12px 0 rgba(252, 209, 17, 0.5)',
+                'accent': '0 0 30px 0 rgba(255, 223, 60, 0.3)'
             },
             width: {
                 'inherit': 'inherit',
             },
             screens: {
                 'phone': '375px',
+            },
+            backgroundImage: {
+                'house': "url('/assets/images/main-page/house.jpg')"
             }
         }
     },

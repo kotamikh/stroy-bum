@@ -1,6 +1,6 @@
 <template>
-  <div class="w-11/12 mx-auto my-5">
-    <Navbar/>
+  <div class="w-full">
+    <Navbar />
     <div class="content">
       <slot/>
     </div>
