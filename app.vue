@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="defaultlayout">
-    <NuxtLoadingIndicator/>
+    <NuxtLoadingIndicator v-if="loading"/>
     <Teleport to="body" v-if="loading">
       <transition>
         <div class="overlay">
@@ -18,10 +18,4 @@ import '~/assets/styles/main.css'
 
 const loading = ref<boolean>(true)
 setTimeout(() => loading.value = false, 2000)
-
-useHead({
-  htmlAttrs: {
-    'data-theme': 'light'
-  }
-})
 </script>

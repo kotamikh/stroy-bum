@@ -1,7 +1,7 @@
 <template>
   <div class="lg:w-[90px] lg:h-[90px] lg:p-3 md:w-[80px] md:h-[80px] sm:w-[70px] sm:h-[70px] w-[65px] h-[65px] p-2 flex justify-center items-center bg-transparent-accent-80 rounded-2xl shadow-accent">
-    <svg fill="#464646" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.467 511.467" xml:space="preserve" stroke="#464646"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <svg fill="#555555" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.467 511.467" xml:space="preserve" stroke="#555555"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
       <g id="SVGRepo_iconCarrier"> <g transform="translate(1 1)"> <g> <g> <path
           d="M289.72,366.52l38.4-30.72c2.56-2.56,3.413-5.973,2.56-9.387c-0.853-3.413-4.267-5.973-7.68-5.973l-46.08-1.707 l-14.507-43.52c-0.853-3.413-4.267-5.973-7.68-5.973s-6.827,2.56-7.68,5.973l-14.507,43.52l-46.08,1.707 c-4.267,0-6.827,2.56-8.533,5.973s0,6.827,2.56,9.387l38.4,30.72l-15.36,45.227c-0.853,3.413,0,6.827,3.413,9.387 c3.413,2.56,7.68,2.56,10.24,0l37.547-29.867l37.547,29.867c1.707,0.853,3.413,1.707,5.12,1.707s3.413-0.853,4.267-1.707 c3.413-1.707,4.267-5.973,3.413-9.387L289.72,366.52z M259.853,373.347c-1.707-0.853-3.413-1.707-5.12-1.707 s-3.413,0.853-5.12,1.707l-20.48,16.213l7.68-23.893c1.707-3.413,0-6.827-2.56-9.387l-24.747-19.627l29.013-1.707 c3.413,0,6.827-2.56,7.68-5.973l8.533-24.747l8.533,24.747c0.853,3.413,4.267,5.973,7.68,5.973l29.013,1.707l-24.747,19.627 c-2.56,2.56-3.413,5.973-2.56,9.387l7.68,23.893L259.853,373.347z"></path>

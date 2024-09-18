@@ -1,8 +1,8 @@
 <template>
   <div class="lg:w-[90px] lg:h-[90px] lg:p-3 md:w-[80px] md:h-[80px] sm:w-[70px] sm:h-[70px] w-[65px] h-[65px] p-2 flex justify-center items-center bg-transparent-accent-80 rounded-2xl shadow-accent">
-    <svg fill="#464646" viewBox="-1.68 -1.68 27.36 27.36" id="Layer_1"
+    <svg fill="#555555" viewBox="-1.68 -1.68 27.36 27.36" id="Layer_1"
          data-name="Layer 1"
-         xmlns="http://www.w3.org/2000/svg" stroke="#464646" stroke-width="0.00024000000000000003">
+         xmlns="http://www.w3.org/2000/svg" stroke="#555555" stroke-width="0.00024000000000000003">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
       <g id="SVGRepo_iconCarrier">

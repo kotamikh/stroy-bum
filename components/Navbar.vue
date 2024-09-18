@@ -7,15 +7,15 @@
     </div>
     <div class="md:contents fixed bottom-0 left-0 px-3 w-full h-14 bg-white flex justify-between items-center">
       <div class="md:flex md:gap-5 contents">
-        <a class="md:text-base max-phone:text-xs text-grey text-sm hover:text-dark-grey cursor-pointer">
+        <NuxtLink class="md:text-base max-phone:text-xs text-grey text-sm hover:text-dark-grey cursor-pointer">
           <PhosphorIconBookOpenText size="22" class="md:hidden mx-auto"/>
-          Каталог</a>
-        <a class="md:text-base max-phone:text-xs text-grey text-sm hover:text-dark-grey cursor-pointer">
+          Каталог</NuxtLink>
+        <NuxtLink @click="scrollToAnchor('delivery')" class="md:text-base max-phone:text-xs text-grey text-sm hover:text-dark-grey cursor-pointer">
           <PhosphorIconCar size="22" class="md:hidden mx-auto"/>
-          Доставка</a>
-        <a class="md:text-base max-phone:text-xs text-grey text-sm hover:text-dark-grey cursor-pointer">
+          Доставка</NuxtLink>
+        <NuxtLink @click="scrollToAnchor('contacts')" class="md:text-base max-phone:text-xs text-grey text-sm hover:text-dark-grey cursor-pointer">
           <PhosphorIconPhone size="22" class="md:hidden mx-auto"/>
-          Контакты</a>
+          Контакты</NuxtLink>
       </div>
       <div class="md:flex md:gap-2 contents">
         <button
@@ -33,8 +33,13 @@
   </div>
 </template>
 
-<style scoped>
-
-</style>
 <script setup lang="ts">
+const { scrollToAnchor } = useAnchorScroll({
+  toTop: {
+    scrollOptions: {
+      behavior: 'smooth',
+      offsetTop: 0,
+    }
+  },
+})
 </script>

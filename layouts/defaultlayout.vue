@@ -4,15 +4,6 @@
     <div class="content">
       <slot/>
     </div>
+    <div class="w-full h-14 md:contents"></div>
   </div>
 </template>
-
-<script setup lang="ts">
-
-</script>
-
-
-
-<style scoped>
-
-</style>

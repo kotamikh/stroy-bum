@@ -15,6 +15,7 @@ module.exports = {
                 'dark-accent': '#FCD111',
                 'transparent-accent-80': '#FFDF3CCC',
                 'transparent-accent-90': '#FFDF3CE6',
+                'overlay': 'rgba(77,88,100,0.2)'
             },
             boxShadow: {
                 'DEFAULT': '0 0 12px 0 rgba(0, 0, 0, 0.1)',
@@ -28,7 +29,8 @@ module.exports = {
                 'phone': '375px',
             },
             backgroundImage: {
-                'house': "url('/assets/images/main-page/house.jpg')"
+                'house': "url('/assets/images/main-page/house.jpg')",
+                'delivery': "url('/assets/images/main-page/delivery.jpg')",
             }
         }
     },
