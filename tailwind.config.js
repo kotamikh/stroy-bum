@@ -3,6 +3,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 'russo-one': ['Russo One'],
+                'nunito': ['Nunito'],
             },
             colors: {
                 'grey': '#555555',
