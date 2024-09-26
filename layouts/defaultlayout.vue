@@ -1,9 +1,9 @@
 <template>
   <div class="w-full">
     <Navbar />
-    <div class="content">
+    <div>
       <slot/>
     </div>
-    <div class="w-full h-14 md:contents"></div>
+    <div class="w-full h-14"></div>
   </div>
 </template>
