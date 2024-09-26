@@ -4,6 +4,6 @@
     <div>
       <slot/>
     </div>
-    <div class="w-full h-14"></div>
+    <div class="w-full md:h-0 h-20"></div>
   </div>
 </template>

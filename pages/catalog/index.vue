@@ -23,13 +23,10 @@
 </template>
 
 <script setup lang="ts">
-const categories = await $fetch('/api/subjects', { method: "get" })
-
 const openedCategories = ref<Array<string>>([])
 
 const makeOpened = (name: string) => {
   if (openedCategories.value.every(cat => cat !== name)) {
-    console.log('no such category', name)
     openedCategories.value.push(name)
   }
 }
@@ -37,8 +34,6 @@ const makeOpened = (name: string) => {
 const collapseCategory = (name: string) => {
   openedCategories.value = openedCategories.value.filter(cat => cat !== name)
 }
+
+const categories = await $fetch('/api/subjects', { method: "get" })
 </script>
-
-<style>
-
-</style>
