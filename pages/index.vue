@@ -58,9 +58,11 @@
     <div class="md:w-1/2 md:h-full sm:h-[250px] h-[180px] bg-cover bg-delivery bg-left-bottom bg-no-repeat"></div>
     <div
         class="font-nunito md:w-1/2 sm:px-8 md:py-2 px-5 py-4 md:h-full h-[230px] flex flex-col md:gap-4 gap-2 justify-center text-grey bg-transparent-accent-90">
-      <h2 class="lg:text-3xl md:text-2xl sm:text-2xl text-xl">Оформим доставку по России</h2>
-      <p class="lg:text-xl md:text-lg sm:text-base text-sm font-light">Компании: СДЭК, БайкалСервис, ПЭК, Объём, Деловые линии.</p>
-      <p class="lg:text-xl md:text-lg sm:text-base text-sm font-light">Товары оплачиваются перед получением, наличными или
+      <h2 class="lg:text-4xl md:text-2xl sm:text-2xl text-xl">Оформим доставку по России</h2>
+      <p class="md:text-lg sm:text-base text-sm font-light">Компании: СДЭК, БайкалСервис, ПЭК, Объём, Деловые
+        линии.</p>
+      <p class="md:text-lg sm:text-base text-sm font-light">Товары оплачиваются перед получением, наличными
+        или
         банковской
         картой. Стоимость доставки рассчитывается
         согласно тарифу транспортной компании.</p>
@@ -75,16 +77,20 @@
     <div
         class="font-nunito md:w-1/2 md:h-full h-[300px] bg-cover bg-house bg-center bg-no-repeat text-white flex md:items-center md:justify-center">
       <div class="w-full h-full">
-        <div class="gap-3 flex flex-col items-end justify-center bg-overlay w-full h-full lg:px-22 md:px-12 sm:px-20 px-10">
+        <div
+            class="gap-3 flex flex-col items-end justify-center bg-overlay w-full h-full lg:px-22 md:px-12 sm:px-20 px-10">
           <h2 class="lg:text-4xl sm:text-2xl text-xl">Контакты</h2>
-          <p class="lg:text-xl md:text-lg sm:text-base text-sm text-end font-light">+7 (8332) 79-69-00 <br/> +7 (8332) 75-69-83</p>
+          <p class="lg:text-lg md:text-base text-sm text-end font-light">+7 (8332) 79-69-00 <br/> +7 (8332)
+            75-69-83</p>
           <p class="lg:text-lg md:text-base text-sm text-end font-light">ПН-ПТ 8:30-17:30 <br/> СБ 9:00-13:00</p>
-          <p class="lg:text-lg md:text-base text-sm text-end font-light">г. Киров, 2-й Кирпичный пер. 2/1 <br/> (территория базы
+          <p class="lg:text-lg md:text-base text-sm text-end font-light">г. Киров, 2-й Кирпичный пер. 2/1 <br/>
+            (территория базы
             “Слон”)</p>
           <button
               class="md:rounded-2xl md:px-3 py-2 px-2 rounded-xl bg-transparent-accent-90 hover:bg-accent hover:shadow-accent-dark transition-all flex gap-1 items-center text-dark-grey">
             <Icon name="bxl:vk" size="20"/>
-            <a href="https://vk.com/stroibum_kirov" target="_blank" class="md:text-base text-sm font-light">Мы ВКонтакте</a>
+            <a href="https://vk.com/stroibum_kirov" target="_blank" class="md:text-base text-sm font-light">Мы
+              ВКонтакте</a>
           </button>
         </div>
       </div>
@@ -92,8 +98,17 @@
   </div>
 
   <div
-      class="lg:h-[380px] md:h-[300px] sm:h-[280px] h-[350px] lg:gap-14 md:gap-10 sm:gap-8 gap-6 justify-center flex flex-col items-center">
+      class="font-nunito lg:h-[550px] sm:h-[490px] xs:h-[400px] h-[700px] lg:gap-14 md:gap-10 sm:gap-8 gap-6 justify-center flex flex-col items-center">
     <p class="lg:text-5xl md:text-4xl sm:text-2xl text-xl text-grey font-medium">Лучшие предложения</p>
+    <div class="flex md:gap-10 xs:flex-nowrap gap-4 gap-y-6 justify-center w-full flex-wrap">
+      <ProductCard v-for="offer in offers"
+                   :image="offer.image"
+                   :price="offer.price"
+                   :oldPrice="offer.oldPrice"
+                   :currencyName="offer.currencyName"
+                   :name="offer.name"
+                   :isAvailable="offer.isAvailable"/>
+    </div>
   </div>
 </template>
 
@@ -101,4 +116,6 @@
 import Ten from "assets/svg/ten.vue"
 import Award from "assets/svg/award.vue"
 import Thumb from "assets/svg/thumb.vue"
+
+const offers = await $fetch('/api/best-offers', { method: "get" })
 </script>

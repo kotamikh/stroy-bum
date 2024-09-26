@@ -5,7 +5,7 @@
         <div class="text-3xl text-header-grey font-russo-one">Строй<span class="text-dark-accent">Бум</span></div>
       </NuxtLink>
     </div>
-    <div class="font-nunito md:contents fixed bottom-0 left-0 px-3 w-full h-14 bg-white flex justify-between items-center">
+    <div class="font-nunito md:contents fixed z-10 bottom-0 left-0 px-3 w-full h-14 bg-white flex justify-between items-center">
       <div class="md:flex md:gap-5 contents m-auto">
         <NuxtLink to="/catalog"
                   class="md:text-base max-phone:text-xs text-grey text-sm hover:text-dark-grey cursor-pointer">
