@@ -9,8 +9,8 @@
         <h1 class="lg:text-5xl md:text-4xl sm:text-2xl sm:text-nowrap text-xl text-white font-medium text-center">
           Сайдинг и кровельные материалы <br/> с доставкой на ваш участок</h1>
         <button
-            class="md:px-6 md:py-3 md:rounded-2xl px-3 py-2 rounded-xl text-dark-grey bg-transparent-accent-90 hover:bg-accent hover:shadow-accent-dark transition-all flex items-center gap-2 mx-auto">
-          <NuxtLink to="/catalog" class="md:text-lg text-sm">Посмотреть каталог</NuxtLink>
+            class="md:px-6 md:py-3 md:rounded-2xl px-3 py-2 rounded-xl text-grey bg-transparent-accent-90 hover:bg-accent hover:shadow-accent-dark transition-all flex items-center gap-2 mx-auto">
+          <NuxtLink to="/catalogue" class="md:text-lg text-sm">Посмотреть каталог</NuxtLink>
           <PhosphorIconCaretRight weight="bold"/>
         </button>
       </div>
@@ -87,7 +87,7 @@
             (территория базы
             “Слон”)</p>
           <button
-              class="md:rounded-2xl md:px-3 py-2 px-2 rounded-xl bg-transparent-accent-90 hover:bg-accent hover:shadow-accent-dark transition-all flex gap-1 items-center text-dark-grey">
+              class="md:rounded-2xl md:px-3 py-2 px-2 rounded-xl bg-transparent-accent-90 hover:bg-accent hover:shadow-accent-dark transition-all flex gap-1 items-center text-grey">
             <Icon name="bxl:vk" size="20"/>
             <a href="https://vk.com/stroibum_kirov" target="_blank" class="md:text-base text-sm font-light">Мы
               ВКонтакте</a>
@@ -102,12 +102,12 @@
     <p class="lg:text-5xl md:text-4xl sm:text-2xl text-xl text-grey font-medium">Лучшие предложения</p>
     <div class="flex md:gap-10 xs:flex-nowrap gap-4 gap-y-6 justify-center w-full flex-wrap">
       <ProductCard v-for="offer in offers"
-                   :image="offer.image"
+                   :image="offer.images[0]"
                    :price="offer.price"
                    :oldPrice="offer.oldPrice"
-                   :currencyName="offer.currencyName"
+                   :currency="offer.currency"
                    :name="offer.name"
-                   :isAvailable="offer.isAvailable"/>
+                   :stock="offer.stock"/>
     </div>
   </div>
 </template>
@@ -116,6 +116,11 @@
 import Ten from "assets/svg/ten.vue"
 import Award from "assets/svg/award.vue"
 import Thumb from "assets/svg/thumb.vue"
+import { definePageMeta } from "#imports";
+
+definePageMeta({
+  layout: 'default'
+})
 
 const offers = await $fetch('/api/best-offers', { method: "get" })
 </script>

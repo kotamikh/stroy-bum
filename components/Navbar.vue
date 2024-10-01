@@ -7,7 +7,7 @@
     </div>
     <div class="font-nunito md:contents fixed z-10 bottom-0 left-0 px-3 w-full h-14 bg-white flex justify-between items-center">
       <div class="md:flex md:gap-5 contents m-auto">
-        <NuxtLink to="/catalog"
+        <NuxtLink to="/catalogue"
                   class="md:text-base max-phone:text-xs text-grey text-sm hover:text-dark-grey cursor-pointer">
           <PhosphorIconBookOpenText size="22" class="md:hidden mx-auto"/>
           Каталог
@@ -23,7 +23,7 @@
           Контакты
         </NuxtLink>
       </div>
-      <button
+      <button @click="router.push('/cart')"
           class="flex md:flex-row flex-col md:gap-1 md:px-4 md:py-2.5 md:bg-transparent-accent-80 md:rounded-xl md:hover:shadow md:hover:bg-transparent-accent-90 md:transition-all items-center text-grey">
         <span class="text-sm max-phone:text-xs">Корзина</span>
         <PhosphorIconBasket size="22" class="md:order-1 order-[-1]"/>
@@ -31,3 +31,7 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const router = useRouter()
+</script>
