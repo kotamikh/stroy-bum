@@ -102,6 +102,7 @@
     <p class="lg:text-5xl md:text-4xl sm:text-2xl text-xl text-grey font-medium">Лучшие предложения</p>
     <div class="flex md:gap-10 xs:flex-nowrap gap-4 gap-y-6 justify-center w-full flex-wrap">
       <ProductCard v-for="offer in offers"
+                   :id="offer.id"
                    :image="offer.images[0]"
                    :price="offer.price"
                    :oldPrice="offer.oldPrice"

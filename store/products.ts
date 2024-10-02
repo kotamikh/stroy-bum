@@ -17,8 +17,8 @@ export const useProductsStore = defineStore('cardsStore', () => {
         }
     }
 
-    const addToCart = (id: number) => {
-        cart.value.set(id, 1)
+    const addToCart = (id: number, amount: number) => {
+        cart.value.set(id, amount)
     }
 
     const deleteFromCart = async (id: number) => {
@@ -26,7 +26,10 @@ export const useProductsStore = defineStore('cardsStore', () => {
     }
 
     return {
+        loadAll,
         productsMap,
-        cart
+        cart,
+        addToCart,
+        deleteFromCart
     }
 })

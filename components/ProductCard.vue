@@ -1,7 +1,7 @@
 <template>
   <div
       class="lg:max-w-[220px] md:w-[22%] max-w-[180px] w-[45%] rounded-xl flex flex-col gap-2 cursor-pointer">
-    <div class="bg-card sm:h-[170px] h-[180px] rounded-xl flex relative">
+    <div class="sm:h-[170px] h-[180px] rounded-xl flex relative">
       <div class="text-grey bg-transparent-accent-80 px-1 md:rounded-lg rounded absolute top-1 right-1 sm:text-sm text-xs">
         -{{ Math.ceil((oldPrice - price) * 100 / oldPrice) }}%
       </div>
@@ -12,10 +12,11 @@
       <span class="text-light-grey line-through md:text-sm text-xs">{{ oldPrice }} {{ currency }}</span>
     </div>
     <p class="text-black font-light line-clamp-2 overflow-hidden sm:text-base text-sm">{{ name }}</p>
-    <div class="flex justify-between flex-wrap mt-auto">
-      <span class="font-light text-grey lg:text-base sm:text-sm text-xs self-end">{{ stock ? 'В наличии' : 'Под заказ' }}</span>
+    <div class="flex gap-1 sm:flex-row flex-col justify-between flex-wrap mt-auto">
+      <span class="font-light text-grey lg:text-base sm:text-sm text-xs sm:self-end">{{ stock ? 'В наличии' : 'Под заказ' }}</span>
       <button
-          class="lg:text-base sm:text-sm text-xs sm:px-4 px-2 py-1 rounded-lg text-grey bg-transparent-accent-80 hover:bg-transparent-accent-90 hover:shadow-accent-dark transition-all">
+          @click="store.addToCart(id, 1)"
+          class="lg:text-base sm:text-sm text-xs sm:px-4 sm:py-1 py-2 rounded-lg text-grey bg-transparent-accent-80 hover:bg-transparent-accent-90 hover:shadow-accent-dark transition-all">
         В корзину
       </button>
     </div>
@@ -23,7 +24,10 @@
 </template>
 
 <script setup lang="ts">
+import { useProductsStore } from "~/store/products";
+
 defineProps({
+  id: Number,
   image: String,
   price: Number,
   oldPrice: Number,
@@ -31,4 +35,6 @@ defineProps({
   name: String,
   stock: Boolean
 })
+
+const store = useProductsStore()
 </script>
