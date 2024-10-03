@@ -7,7 +7,7 @@
     <div class="bg-overlay w-full h-full">
       <div class="sm:w-3/4 h-full m-auto flex flex-col gap-5 justify-center">
         <h1 class="lg:text-5xl md:text-4xl sm:text-2xl sm:text-nowrap text-xl text-white font-medium text-center">
-          Сайдинг и кровельные материалы <br/> с доставкой на ваш участок</h1>
+          Сайдинг и строительные материалы <br/> с доставкой на ваш участок</h1>
         <button
             class="md:px-6 md:py-3 md:rounded-2xl px-3 py-2 rounded-xl text-grey bg-transparent-accent-90 hover:bg-accent hover:shadow-accent-dark transition-all flex items-center gap-2 mx-auto">
           <NuxtLink to="/catalogue" class="md:text-lg text-sm">Посмотреть каталог</NuxtLink>

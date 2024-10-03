@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import { useProductsStore } from "~/store/products";
 
-defineProps({
+const props = defineProps({
   id: Number,
   image: String,
   price: Number,
@@ -35,17 +35,19 @@ defineProps({
   stock: Boolean
 })
 
-let productAmount = ref(1)
+const productAmount = computed(() => {
+  if (props.id) {
+    return store.cart.get(props.id) || 0
+  }
+})
 
 const store = useProductsStore()
 
 const increaseAmount = (id: number) => {
-  productAmount.value++
-  store.addToCart(id, productAmount.value)
+  store.addToCart(id, productAmount.value + 1)
 }
 
 const decreaseAmount = (id: number) => {
-  productAmount.value--
-  store.addToCart(id, productAmount.value)
+  store.addToCart(id, productAmount.value - 1)
 }
 </script>
